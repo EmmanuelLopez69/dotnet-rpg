@@ -22,7 +22,7 @@ namespace dotnet.rpg.Controllers
             _weaponService = weaponService;
         }
 
-        [HttpPost]
+        [HttpPost("Addweapon")]
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> Addweapon(AddWeaponDto newWeapon)
         {
             return Ok(await _weaponService.AddWeapon(newWeapon));
